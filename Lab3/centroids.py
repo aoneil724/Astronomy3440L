@@ -14,10 +14,6 @@ def find_star_pos(image_file, estimate):
 
     # Specify a region where no stars exist and its just background, y1:y2, x1:x2
 
-    blank_region =centroid_data[400:500, 600:700]
-
-    centroid_data -= np.median(blank_region)
-
     # Rough position of stars you want to measure (use ds9)
     x_init, y_init = map(list, zip(*estimate))
 
@@ -47,6 +43,8 @@ def find_star_pos(image_file, estimate):
     print(rad)
     if rad == 8:
         print(image_file)
+        print(x_init, y_init)
+        print(x,y)
         aperture = CircularAperture(position, r=rad + 2)
         annulus_aperture = CircularAnnulus(position, r_in=rad + 5, r_out=rad + 10)
 
@@ -57,6 +55,6 @@ def find_star_pos(image_file, estimate):
 
         aperture.plot(color='white', lw=2)
         annulus_aperture.plot(color='red', lw=2)
-
+        print(position)
         plt.show()
     return position, rad

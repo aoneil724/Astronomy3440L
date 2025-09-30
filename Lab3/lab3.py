@@ -5,7 +5,7 @@ from astropy.io import fits
 from photutils.aperture import CircularAnnulus, CircularAperture, ApertureStats, aperture_photometry
 from centroids import find_star_pos
 
-directory_path = '/astro344/observation_data/lab3'
+directory_path = '/home/aoneil/School/Astro/Astronomy3440L/Lab3/Cooked/observation_data/lab3/'
 
 # 1 B filter, A, X5, X6     see 3 /home/colton/school/classes/astro344/observation_data/lab3/cookedfilB_A_x6_7-5_00x.FIT
 # 2 B filter, B, X2, X3, X8 see 5 /home/colton/school/classes/astro344/observation_data/lab3/cookedfilB_B_x2_7-5_00x.FIT

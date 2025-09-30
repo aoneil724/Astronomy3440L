@@ -42,7 +42,6 @@ rounded_y = np.round(y)
 # find the radius of the aperature
 starting_val = centroid_data[int(rounded_x[0]), int(rounded_y[0])]
 rad = 0
-ind = 0
 for z in range(1000):
     val = centroid_data[int(rounded_x[0])+z, int(rounded_y[0])]
     if val < (starting_val / 4):
