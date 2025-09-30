@@ -5,7 +5,7 @@ from astropy.io import fits
 from photutils.aperture import CircularAnnulus, CircularAperture, ApertureStats, aperture_photometry
 from centroids import find_star_pos
 
-directory_path = '/home/colton/school/classes/astro344/observation_data/lab3'
+directory_path = 'astro344/observation_data/lab3'
 
 def std(x):
     a = np.sum([(i - np.mean(x))**2 for i in x])
